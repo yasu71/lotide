@@ -1,5 +1,5 @@
-const head = function(array1){
-  console.log(array1);
+const head = function(arr){
+  return arr[0];
 };
 
 const assertEqual = function(actual, expected) {
@@ -11,17 +11,6 @@ const assertEqual = function(actual, expected) {
 };
 
 // TEST CODE
-// Comparing non-identical strings
-assertEqual("Lighthouse Labs", "Bootcamp");
-
-// Comparing identical numbers
-assertEqual(1, 1);
-
-// Comparing identical strings
-assertEqual("Yasu", "Yasu");
-
-// Comparing non-identical numbers
-assertEqual(2, 1);
 
 assertEqual(head([5,6,7]), 5);
 assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
