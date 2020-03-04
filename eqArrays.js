@@ -4,7 +4,7 @@ let eqArrays = function(arr1, arr2){
   } else {
     return true;
   }
-}
+};
 
 const assertEqual = function(actual, expected) {
   if (actual === expected){
