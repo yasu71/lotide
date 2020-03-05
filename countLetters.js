@@ -8,9 +8,9 @@ const assertEqual = function(actual, expected) {
 
 let countLetters = function(letters) {
   let result = {}; 
-  letters = letters.split(' ');
-  letters = letters.join('');
+  letters = letters.split(' ').join('');
 
+  // console.log(letters); <- check what letters is printed
   for (let letter of letters){
     //check if the current letter is in result obj
     //add +1
@@ -18,9 +18,14 @@ let countLetters = function(letters) {
       result[letter] += 1;
     }     
     //else add the key and value to 1
+
     else {
       result[letter] = 1;
     }
+
+    // == Another Way to solve ==
+    // result[letter] = result[letter] || 0;
+    // result[letter] += 1
   }
   return result
 };
