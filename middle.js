@@ -1,21 +1,22 @@
-// TEST/ASSERTION FUNCTIONS
-let eqArrays = function(arr1, arr2){
-  //is it an arr
-  for (let i = 0; i < arr1.length; i++){
-    if (arr1[i] !== arr2[i]){
-      return false;
-    }
-  }
-  return true;
-};
+const assertArraysEqual = require('./assertArraysEqual');
 
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)){
-    console.log(`\uD83D\uDE00 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`\uD83D\uDE08 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+// // TEST/ASSERTION FUNCTIONS
+// let eqArrays = function(arr1, arr2){
+//   for (let i = 0; i < arr1.length; i++){
+//     if (arr1[i] !== arr2[i]){
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+
+// const assertArraysEqual = function(actual, expected) {
+//   if (eqArrays(actual, expected)){
+//     console.log(`\uD83D\uDE00 Assertion Passed: ${actual} === ${expected}`);
+//   } else {
+//     console.log(`\uD83D\uDE08 Assertion Failed: ${actual} !== ${expected}`);
+//   }
+// };
 
 // MIDDLE FUNCTION
 const middle = function(array) {
@@ -39,13 +40,15 @@ const middle = function(array) {
   return middleElement;
 };
 
-// TEST CODE
-assertArraysEqual(middle([1]), []); // => []
-assertArraysEqual(middle([1, 2]), []); // => []
+module.exports = middle;
 
-assertArraysEqual(middle([1, 2, 3]), [2]); // => [2]
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]); // => [3]
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6, 7]), [4]); // => [4]
+// // TEST CODE
+// assertArraysEqual(middle([1]), []); // => []
+// assertArraysEqual(middle([1, 2]), []); // => []
 
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]); // => [2, 3]
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]); // => [3, 4]
+// assertArraysEqual(middle([1, 2, 3]), [2]); // => [2]
+// assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]); // => [3]
+// assertArraysEqual(middle([1, 2, 3, 4, 5, 6, 7]), [4]); // => [4]
+
+// assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]); // => [2, 3]
+// assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]); // => [3, 4]
